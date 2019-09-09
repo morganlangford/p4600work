@@ -9,17 +9,25 @@ int main()
 
 	float mean;
 	float std_dev;
+	float sum = 0.0; 	//for std dev
 
+	int sizeArray = sizeof(data)/sizeof(data[0]);
 	/*	Here you can put the code to find the standard deviation of the data array	*/
 
+	//First calculate the mean
+	for (int i=0; i<sizeArray; i++){
+		mean += data[i];
+	}
 
-	/*  ==== START OF YOUR CODE ==== */
+	mean = mean/sizeArray;	// that's the mean
+	//Now find standard dev
+	for (int j=0; j<sizeArray; j++){
+		sum += powf((data[j] - mean),2);
+	}
 
+	std_dev = sqrt(sum/(sizeArray-1));
 
-
-	/*  ==== END OF YOUR CODE ==== */
-
-
+	
 	/* These lines will output the results to console */
 
 	printf("\nMean = %f", mean);

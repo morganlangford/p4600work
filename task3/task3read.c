@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <math.h>
 
+/*JAMES: Good but should check for sitations such as len = 0 
+Ideally should also keep calculation and printing separate - what if you want
+to reuse these functions in a program where printf doesn't apply - e.g. an embedded
+device without a screen */
+
 float findMean(float* input, int len){	// this function finds the mean
 	float mean = 0;
 
@@ -28,6 +33,8 @@ float findStdDev(float* input, float mean, int len){	// this function finds the 
 	return stdDev;
 }
 
+
+
 int main(){
 	FILE* dataFile;	// pointer towards our data file holding x and y for sine
 
@@ -42,6 +49,8 @@ int main(){
 			counter++;
 		}
 		
+		/*JAMES: Should catch here if counter == 0  */
+
 		float y[counter]; 					// creating an array of length of file
 
 		rewind(dataFile); 					// start at the beginning of the file again

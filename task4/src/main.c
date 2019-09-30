@@ -10,27 +10,33 @@
 
 int main(){
 	/* This is for testing purposes */
-	int len = 500;
+
+	/* Might not always know the length; you might have to run through
+	the data and find it sometimes*/
+	int len = 500;				
 	float arr[len];
-	float output[len];
+	float output[len-4];		// len - 4 because the moving average in the function loses 4 data points
 
-	FILE* noisySineWave;
+	FILE* noisySineWave;		// this is the noisy wave I created that I want to read off of
 
-	float x[len];
-	float y[len];
+	float x[len];				// need two separate arrays
+	float y[len];				// one each for x, y values
 
-	noisySineWave = fopen("noisySineWave.dat","r");
+	noisySineWave = fopen("noisySineWave.dat","r");		// read only file
 
-	if (noisySineWave != NULL){
+	if (noisySineWave != NULL){							// this turns the input data into an array
 		for (int i = 0; i < len; i++){	
 			fscanf(noisySineWave,"%f %f",&x[i],&y[i]);
 		}
-	else print("\nnoisySineWave didn't open");
+	}
+	else printf("\nnoisySineWave didn't open");
 
-	smoothCurve(len,arr,output); 
-	float amp = amplitude(output);
+	smoothCurve(len,&arr,&output); 					// calls function where it smooths the curve
+	float amp = amplitude(len,arr);					// this function finds the amplitude
 
 	printf("\nAmplitude is %f",amp);
+
+	/* Right, I guess I have to print out the new, smoothed data to a file */
 
 	return 0;
 }

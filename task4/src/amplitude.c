@@ -4,7 +4,7 @@
 
 /* This function is to find the max amplitude of the sine wave */
 
-float amplitude(float* arr){
+float amplitude(int len, float* arr){
 	// Basically I have to find the max and min values and then find the difference
 	float max,min,amp;
 
@@ -12,17 +12,18 @@ float amplitude(float* arr){
 	than the max/min and if it is then make that the new max/min */
 	int i = 0;
 
-	while (arr[i] != NULL){
-		if (arr[i] > max){
-			max = arr[i];
+	while (i < len){
+		if (arr[i] > max){		// if this point is bigger than the current max
+			max = arr[i];		// set it to the new max
 		}
-		if (arr[i] < min){
-			min = arr[i];
+		if (arr[i] < min){		// if this point is smaller than the current min
+			min = arr[i];		// set it to the new min
 		}
-		i++;
+		i++;					// check the next point
 	}
 
-	if (abs(max) > abs(min)){
+	/* Check which abs value is bigger, return that as amplitude */
+	if (abs(max) > abs(min)){	
 		amp = max;
 	}
 	else amp = min;

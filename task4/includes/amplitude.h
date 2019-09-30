@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-float amplitude(float* arr);
+float amplitude(int len, float* arr);
 
 #endif

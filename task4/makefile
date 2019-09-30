@@ -1,26 +1,28 @@
 # Makefile is like a macro for running your command line 
+# call it by typing make
 
-# make a list of all the .o files that are in the directory
-OBJ = main.o smoothCurve.o amplitude.o 
-BUILDDIR = ./build
-SRCDIR = ./src
-INCLUDEDIR = ./include
-OBJDIR = $(patsubst %,$(BUILDDIR)/%,$(OBJ))
+CC		= gcc
+CFLAGS	= -c
+LFLAGS	= 
 
-TARGET = program
+#Specify build, include and source directories
+BUILDDIR  = ./build
+INCDIR    = ./includes
+SRCDIR    = ./src
 
-#main.o: main.c
-#	gcc -c -o main.o main.c
+#Create a list of all the .c files in the source directory
+SOURCES   = $(wildcard $(SRCDIR)/*.c)
+#Make another list by replacing all the .c's from the sources list with .o's and change the directory to build
+OBJECTS   = $(patsubst $(SRCDIR)/%.c, $(BUILDDIR)/%.o, $(SOURCES))
 
-#smoothCurve.o: smoothCurve.c
-#	gcc -c -o smoothCurve.o smoothCurve.c
+LIBRARIES  = m
 
-# but that's a lot of work to type all of them out so... 
+LIBCMD    = $(addprefix -l,$(LIBRARIES))
+
+TARGET	  = program
+
 $(BUILDDIR)/%.o: $(SRCDIR)/%.c
-	gcc -c -o $@ $< 	# where $@ means everything to the left of the : and $< means to the right
-# -o means : "output file name"
+	$(CC) $(CFLAGS) -I$(INCDIR) -o $@ $<
 
-# if this is out of date, it'll do the above (like if anything has changed)
-# it links the file objects into an executable 
-$(TARGET): $(OBJ)
-	gcc -o $@ $^  	# recompile all of the above ones 
+$(TARGET): $(OBJECTS)
+	$(CC) -o $@ $^ $(LIBCMD)

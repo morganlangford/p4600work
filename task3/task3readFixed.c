@@ -15,7 +15,7 @@ float findMean(float* input, int len){	// this function finds the mean
 	float mean = 0;
 
 	for (int i=0; i<len; i++){
-		mean += input[i];			// this is actually finding the sum
+		mean += input[i];				// this is actually finding the sum
 	}
 
 	return mean/len;
@@ -25,12 +25,11 @@ float findStdDev(float* input, float mean, int len){	// this function finds the 
 	float sum;
 
 	for (int j=0; j<len; j++){
-		sum += powf((input[j] - mean),2);		// sum of the squared differences
+		sum += powf((input[j] - mean),2);	// sum of the squared differences
 	}
+			
 
-	float stdDev = sqrt(sum/(len-1));			// equation for std dev using the mean from previous function
-
-	return stdDev;
+	return sqrt(sum/(len-1)); 				// equation for std dev using the mean from previous function
 }
 
 int main(){
@@ -62,7 +61,7 @@ int main(){
 		printf("\nStandard deviation = %f",stdDev);
 
 	}
-	else printf("\nCouldn't read file.");	// uf the file couldn't be opened...
+	else printf("\nCouldn't read file.");	// if the file couldn't be opened...
 
 	fclose(dataFile);						// close file
 }

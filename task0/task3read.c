@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-/*JAMES: Good but should check for sitations such as len = 0 
-Ideally should also keep calculation and printing separate - what if you want
-to reuse these functions in a program where printf doesn't apply - e.g. an embedded
-device without a screen */
-
 float findMean(float* input, int len){	// this function finds the mean
 	float mean = 0;
 
@@ -15,6 +10,7 @@ float findMean(float* input, int len){	// this function finds the mean
 	}
 
 	mean = mean/len;				// mean = sum/#values
+	printf("\nMean = %f",mean);
 
 	return mean;
 }
@@ -27,6 +23,7 @@ float findStdDev(float* input, float mean, int len){	// this function finds the 
 	}
 
 	float stdDev = sqrt(sum/(len-1));					// equation for std dev using the mean from previous function
+	printf("Standard deviation = %f",stdDev);
 
 	return stdDev;
 }
@@ -54,11 +51,7 @@ int main(){
 		}
 		
 		float mean = findMean(y,counter); 	// send array y and length to function findMean
-		float stdDev = findStdDev(y,mean,counter);			// call next function to find standard dev
-
-		printf("\nMean = %f",mean);
-		printf("\nStandard deviation = %f",stdDev);
-
+		findStdDev(y,mean,counter);			// call next function to find standard dev
 	}
 	else printf("\nCouldn't read file.");	// uf the file couldn't be opened...
 

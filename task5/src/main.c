@@ -1,4 +1,3 @@
-  
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>	
@@ -18,7 +17,7 @@ void main(int argc, char** argv)
 
 	if(status == VI_SUCCESS)
 	{
-		status = viFindRsrc(defaultRM,"USB[0-9]::*INSTR",
+		status = viFindRsrc(defaultRM,"USB[0-9]::0?*INSTR",
 						&resourceList,&num_inst,description);
 		if(status == VI_SUCCESS)
 		{
@@ -39,5 +38,5 @@ void main(int argc, char** argv)
 			printf("Couldn't find any instruments");
 		}
 	}
-	printf("Failed to open defaultRM");
+	else printf("Failed to open defaultRM");
 }

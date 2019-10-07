@@ -31,12 +31,12 @@ int main(){
 	}
 	else printf("\nnoisySineWave didn't open");
 
-	smoothCurve(len,&arr,&output); 					// calls function where it smooths the curve
-	float amp = amplitude(len,arr);					// this function finds the amplitude
+	smoothCurve(len,y,output); 					// calls function where it smooths the curve
+	float amp = amplitude(len,y);					// this function finds the amplitude
 
 	printf("\nAmplitude is %f",amp);
 
-	/* Right, I guess I have to print out the new, smoothed data to a file */
+	/* Print out the new, smoothed data to a file */
 
 	return 0;
 }

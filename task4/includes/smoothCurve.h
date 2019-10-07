@@ -4,6 +4,6 @@
 
 #include <stdio.h>
 
-void smooth(int len, float* input, float* smoothArray);
+void smoothCurve(int len, float* input, float* output);
 
 #endif

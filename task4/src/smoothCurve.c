@@ -6,11 +6,8 @@
 	reduce the noise and return a smooth set of data
 	- done by averaging data */
 
-void smooth(int len, float* input, float* output){	
-	float avg;
-
-	/* Now we want to make a new array of length 4 less than the original array because 
-	during the averaging we will lose four data points */					
+void smoothCurve(int len, float* input, float* output){	
+	float avg;				
 
 	for(int i = 0; i < len; i++){ 			// this loop cycles through all the data							
 		avg = 0;							// reset every time			
@@ -22,6 +19,6 @@ void smooth(int len, float* input, float* output){
 		output[i] = avg;					// fill new array
 	}
 
-	// Note to self: you cannot return an array
+	// Note to self: you cannot return an array. Use pointers instead
 }
 

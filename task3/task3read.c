@@ -33,6 +33,8 @@ float findStdDev(float* input, float mean, int len){	// this function finds the 
 	return stdDev;
 }
 
+
+
 int main(){
 	FILE* dataFile;	// pointer towards our data file holding x and y for sine
 
@@ -47,6 +49,8 @@ int main(){
 			counter++;
 		}
 		
+		/*JAMES: Should catch here if counter == 0  */
+
 		float y[counter]; 					// creating an array of length of file
 
 		rewind(dataFile); 					// start at the beginning of the file again

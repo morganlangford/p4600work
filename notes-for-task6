@@ -1,0 +1,11 @@
+/* 
+Task 6:
+
+Having one device connected:
+Normally we write...
+viFindRsrc(defaultRM,"USB[0-9]::?*INTSR",.....,description);
+viOpen(defaultRM, description,.....,&scopeHandle);
+
+Having multiple devices connected:
+
+*/

@@ -52,8 +52,4 @@ void main(){
 	printf("\nAmplitude is: %f",amp);
 	}
 	else printf("\nCould not find file");
-
-
-	
-	
 }

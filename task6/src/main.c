@@ -7,36 +7,6 @@
 #include "functionGen.h"
 #include "oscilloscope.h"
 
-ViStatus getCurve(ViSession handle, char* dataBuffer, int npoints)
-{
-	ViUInt32 resultCount;
-	ViStatus status;
-	viWrite(handle, "CURV?\n",6,&resultCount);
-	status = viRead(handle, dataBuffer, npoints, &resultCount);
-	return status;
-}
-
-void identify(ViSession scopeHandle, char* resultBuffer, ViUInt32 resultCount)
-{
-	viWrite(scopeHandle,"*IDN?\n",6,&resultCount);
-	viRead(scopeHandle,resultBuffer,256,&resultCount);
-}
-
-void ifOpened(ViSession scopeHandle, ViUInt32 resultCount)
-{
-	viWrite(scopeHandle,"DAT:SOU CH1\n",12,&resultCount);
-	viWrite(scopeHandle,"DAT:START 1\n",12,&resultCount);
-	viWrite(scopeHandle,"DAT:STOP 2500\n",14,&resultCount);
-}
-
-void ret(ViSession scopeHandle, ViUInt32 resultCount)
-{
-	char ret[20];	// return
-	ret[19] = '\0';
-	viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount);
-	viRead(scopeHandle,ret,20,&resultCount);
-}
-
 void main(int argc, char** argv)
 {
 	unsigned char resultBuffer[256];		// holds input values
@@ -45,50 +15,71 @@ void main(int argc, char** argv)
 	ViUInt32 num_inst;
 	ViUInt32 resultCount;
 
-	ViSession defaultRM, scopeHandle;
-	ViChar description[VI_FIND_BUFLEN];
-	char dataBuffer[2500];
-	float floatBuffer[2500];
-	float y;
-	float input[1000];
-	float output[1000];
+	/* Set these values */
+	int numPoints = 2500;		// number of points it reads from scope
+	int graphPoints = graphPoints;		// number of points it'll actually graph
 
-	int lsb;
-	int msb;
+	ViSession defaultRM, scopeHandle, FGHandle;
+	ViChar description[VI_FIND_BUFLEN];
+	char dataBuffer[numPoints];
+	float floatBuffer[numPoints];
+	float y;
+	float input[graphPoints];
+	float output[graphPoints];
+
+	char lower_limit_string[20];
+    printf("\nPlease type lower limit of range of frequencies:\n");
+    fgets(lower_limit_string,20,stdin); 
+    int lower_limit = atoi(lower_limit_string);
+
+    char upper_limit_string[20];
+    printf("\nPlease type upper limit of range of frequencies:\n");
+    fgets(upper_limit_string,20,stdin); 
+    int upper_limit = atoi(upper_limit_string);
+
+    char file_name[20];
+    printf("\nPlease type file name to which you want the data to be saved:\n");
+    fgets(file_name,20,stdin); 
 
 	status = viOpenDefaultRM(&defaultRM);
-
 	if(status == VI_SUCCESS)
 	{
-		status = viFindRsrc(defaultRM,"USB[0-9]::?*INSTR",	&resourceList,&num_inst,description);
+		status = viFindRsrc(defaultRM,"USB[0-9]::0x0699?*INSTR",&resourceList,&num_inst,description);
 		if(status == VI_SUCCESS)
 		{
-			status = viOpen(defaultRM,description,	VI_NULL,VI_NULL,&scopeHandle);
-
+			status = viOpen(defaultRM,description,VI_NULL,VI_NULL,&scopeHandle);
 			if(status == VI_SUCCESS)
 			{
 				printf("\nOpened %s\n",description);
 
-				identify(ViSession scopeHandle, unsigned char resultBuffer, ViUInt32 resultCount);
+				viWrite(scopeHandle,"*IDN?\n",6,&resultCount);
+				viRead(scopeHandle,resultBuffer,256,&resultCount);
 
 				printf("\nResult count = %d",resultCount);
 				printf("\nResult buffer = %s\n",resultBuffer);
 
-				ifOpened(ViSession scopeHandle, ViUInt32 resultCount);
+				viWrite(scopeHandle,"DAT:SOU CH1\n",12,&resultCount);
+				viWrite(scopeHandle,"DAT:START 1\n",12,&resultCount);
+				viWrite(scopeHandle,"DAT:STOP 2500\n",14,&resultCount);		// don't forget to change the number of points
 
 				/* Get curve (data points) */ 
-				getCurve(scopeHandle, dataBuffer, 2500); 
+				ViUInt32 resultCount;
+				ViStatus status;
+				viWrite(scopeHandle, "CURV?\n",6,&resultCount);
+				status = viRead(scopeHandle, dataBuffer, numPoints, &resultCount); 
 
 				/* Get scale of scope */
-				ret(ViSession scopeHandle, ViUInt32 resultCount); 
+				char ret[20];	// return
+				ret[19] = '\0';
+				viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount);
+				viRead(scopeHandle,ret,20,&resultCount);
 				printf("Scale is %s\n",ret);
 
 				float volts;
 				sscanf(ret,"%f",&volts);
 				printf("\nvolts = %f",volts);
 
-				for(int i = 0; i < 1000; i++)
-				{
+				for(int i = 0; i < graphPoints; i++){
 					floatBuffer[i] = dataBuffer[i];
 					y = floatBuffer[i] * 10.0 * volts / 256; 	
 					input[i] = y;	
@@ -97,26 +88,27 @@ void main(int argc, char** argv)
 
 				/* Now we need to actually smooth the curve and find the amplitude */
 				printf("\nSmooth curve data:\n");
-				smoothCurve(1000, input, output);
-				for (int j = 0; j < 1000; j++){
+				smoothCurve(graphPoints, input, output);
+				for (int j = 0; j < graphPoints; j++){
 					printf("\n%f", output[j]);
 				}				
 
-				float amp = amplitude(1000, output);
+				float amp = amplitude(graphPoints, output);
 				printf("\nAmplitude = %f",amp);
+
+
+				/* Print out frequency vs amplitude */
+				FILE* freq_vs_amp;
+				freq_vs_amp = fopen("plot_final_data.DAT","w");
+				for(int k = 0; k < graphPoints; k++){
+					fprintf(freq_vs_amp,"\n%f",output[k]);
+				}
+
+				fclose(freq_vs_amp);
 			}
-			else
-			{
-				printf("\nFailed to open %s",description);
-			}
+			else printf("\nFailed to open %s",description);
 		}
-		else
-		{
-			printf("\nCouldn't find any instruments");
-		}
+		else printf("\nCouldn't find any instruments");
 	}
-	else
-	{
-		printf("\nFailed to open defaultRM");
-	}
+	else printf("\nFailed to open defaultRM");
 }

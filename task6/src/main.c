@@ -3,8 +3,9 @@
 #include <math.h>	
 #include <visa.h>
 
-#include "amplitude.h"
-#include "smoothCurve.h"
+#include "modData.h"
+#include "functionGen.h"
+#include "oscilloscope.h"
 
 ViStatus getCurve(ViSession handle, char* dataBuffer, int npoints)
 {
@@ -13,6 +14,27 @@ ViStatus getCurve(ViSession handle, char* dataBuffer, int npoints)
 	viWrite(handle, "CURV?\n",6,&resultCount);
 	status = viRead(handle, dataBuffer, npoints, &resultCount);
 	return status;
+}
+
+void identify(ViSession scopeHandle, char* resultBuffer, ViUInt32 resultCount)
+{
+	viWrite(scopeHandle,"*IDN?\n",6,&resultCount);
+	viRead(scopeHandle,resultBuffer,256,&resultCount);
+}
+
+void ifOpened(ViSession scopeHandle, ViUInt32 resultCount)
+{
+	viWrite(scopeHandle,"DAT:SOU CH1\n",12,&resultCount);
+	viWrite(scopeHandle,"DAT:START 1\n",12,&resultCount);
+	viWrite(scopeHandle,"DAT:STOP 2500\n",14,&resultCount);
+}
+
+void ret(ViSession scopeHandle, ViUInt32 resultCount)
+{
+	char ret[20];	// return
+	ret[19] = '\0';
+	viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount);
+	viRead(scopeHandle,ret,20,&resultCount);
 }
 
 void main(int argc, char** argv)
@@ -47,23 +69,18 @@ void main(int argc, char** argv)
 			{
 				printf("\nOpened %s\n",description);
 
-				viWrite(scopeHandle,"*IDN?\n",6,&resultCount);
-				viRead(scopeHandle,resultBuffer,256,&resultCount);
+				identify(ViSession scopeHandle, unsigned char resultBuffer, ViUInt32 resultCount);
 
 				printf("\nResult count = %d",resultCount);
 				printf("\nResult buffer = %s\n",resultBuffer);
 
-				viWrite(scopeHandle,"DAT:SOU CH1\n",12,&resultCount);
-				viWrite(scopeHandle,"DAT:START 1\n",12,&resultCount);
-				viWrite(scopeHandle,"DAT:STOP 2500\n",14,&resultCount);
+				ifOpened(ViSession scopeHandle, ViUInt32 resultCount);
 
-				/* Get curve */ 
+				/* Get curve (data points) */ 
 				getCurve(scopeHandle, dataBuffer, 2500); 
 
-				char ret[20];	// return
-				ret[19] = '\0';
-				viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount);
-				viRead(scopeHandle,ret,20,&resultCount);
+				/* Get scale of scope */
+				ret(ViSession scopeHandle, ViUInt32 resultCount); 
 				printf("Scale is %s\n",ret);
 
 				float volts;

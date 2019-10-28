@@ -20,7 +20,7 @@ viOpen(defaultRM, description,.....,&scopeHandle);
 Check status of search
 
 viFindRsrc(defaultRM,"USB[0-9]::0x1AB1?*INTSR",.....,description); // rigol
-viOpen(defaultRM, description,.....,&scopeHandle);
+viOpen(defaultRM, description,.....,&FGHandle);
 Check status of search
 
 viWrite(scopeHandle,"*IDN?\n",6,....);

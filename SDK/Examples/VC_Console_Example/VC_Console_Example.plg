@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VC_Console_Example - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\JTZheng\LOCALS~1\Temp\RSP7F3.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/VC_Console_Example.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VC_Console_Example\VC_Console_Example.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\JTZheng\LOCALS~1\Temp\RSP7F3.tmp" 
+Creating temporary file "C:\DOCUME~1\JTZheng\LOCALS~1\Temp\RSP7F4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib SSClassic_USBCamera_SDK.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/VC_Console_Example.pdb" /debug /machine:I386 /out:"Debug/VC_Console_Example.exe" /pdbtype:sept 
+.\Debug\StdAfx.obj
+.\Debug\VC_Console_Example.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\JTZheng\LOCALS~1\Temp\RSP7F4.tmp"
+<h3>Output Window</h3>
+Compiling...
+VC_Console_Example.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+VC_Console_Example.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

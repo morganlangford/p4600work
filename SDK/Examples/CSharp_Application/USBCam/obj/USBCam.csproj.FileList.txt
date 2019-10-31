@@ -1,0 +1,8 @@
+bin\Debug\USBCam.exe
+bin\Debug\USBCam.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\USBCam.Properties.Resources.resources
+obj\Debug\USBCam.csproj.GenerateResource.Cache
+obj\Debug\USBCam.exe
+obj\Debug\USBCam.pdb
+obj\Debug\USBCam.FUSBCam.resources

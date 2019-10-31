@@ -1,0 +1,47 @@
+library SSClassic_USBCamera_SDK
+
+EXPORTS
+
+      SSClassicUSB_InitDevice
+      SSClassicUSB_UnInitDevice
+      SSClassicUSB_GetModuleNoSerialNo
+      SSClassicUSB_AddDeviceToWorkingSet
+      SSClassicUSB_RemoveDeviceFromWorkingSet
+      SSClassicUSB_StartCameraEngine
+      SSClassicUSB_StopCameraEngine
+      SSClassicUSB_ShowFactoryControlPanel
+      SSClassicUSB_HideFactoryControlPanel
+      SSClassicUSB_StartFrameGrab
+      SSClassicUSB_StopFrameGrab
+      SSClassicUSB_GetFrameSetting
+      SSClassicUSB_SetFrameSetting
+      SSClassicUSB_SetCameraWorkMode
+      SSClassicUSB_ManualEnableCallBack
+      SSClassicUSB_SetBayerFilterType
+      SSClassicUSB_SetCustomizedResolution
+      SSClassicUSB_SetExposureTime
+      SSClassicUSB_SetXYStart
+      SSClassicUSB_SetGains
+      SSClassicUSB_SetGainRatios
+      SSClassicUSB_SetGamma
+      SSClassicUSB_SetBWMode
+      SSClassicUSB_SetMinimumFrameDelay
+      SSClassicUSB_SoftTrigger
+      SSClassicUSB_SetSensorFrequency
+      SSClassicUSB_SetSensorBlankings
+      SSClassicUSB_SetSensorMode
+      SSClassicUSB_SetTriggerBurstCount
+      SSClassicUSB_ResetTimeStamp
+      SSClassicUSB_InstallFrameHooker
+      SSClassicUSB_InstallUSBDeviceHooker
+      SSClassicUSB_GetCurrentFrame
+      SSClassicUSB_GetCurrentFrame16bit
+      SSClassicUSB_GetCurrentFramePara
+      SSClassicUSB_GetDevicesErrorState
+      SSClassicUSB_IsUSBSuperSpeed
+      SSClassicUSB_SetGPIOConfig
+      SSClassicUSB_SetGPIOOut
+      SSClassicUSB_SetGPIOInOut
+      SSClassicUSB_ApplicationActivate
+
+

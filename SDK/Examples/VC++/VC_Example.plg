@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VC_Example - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/VC_Example.res" /d "_DEBUG" "C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_Example.rc"" 
+Creating temporary file "C:\Users\think\AppData\Local\Temp\RSP809F.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/VC_Example.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_Example.cpp"
+"C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_ExampleDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\think\AppData\Local\Temp\RSP809F.tmp" 
+Creating temporary file "C:\Users\think\AppData\Local\Temp\RSP80A0.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/VC_Example.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\think\AppData\Local\Temp\RSP80A0.tmp" 
+Creating temporary file "C:\Users\think\AppData\Local\Temp\RSP80A1.tmp" with contents
+[
+SSClassic_USBCamera_SDK.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/VC_Example.pdb" /debug /machine:I386 /out:"Debug/VC_Example.exe" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\VC_Example.obj"
+".\Debug\VC_ExampleDlg.obj"
+".\Debug\VC_Example.res"
+]
+Creating command line "link.exe @C:\Users\think\AppData\Local\Temp\RSP80A1.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+VC_Example.cpp
+VC_ExampleDlg.cpp
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_ExampleDlg.cpp(125) : warning C4101: 'i' : unreferenced local variable
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_ExampleDlg.cpp(240) : warning C4101: 'buffer' : unreferenced local variable
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\VC++\VC_ExampleDlg.cpp(403) : warning C4101: 'result' : unreferenced local variable
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+VC_Example.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

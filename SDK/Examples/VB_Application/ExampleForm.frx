@@ -1,0 +1,7 @@
+ÿ_It's important to invoke the SDK APIs in correct sequence..and it's demostrated by correct Button click 
+sequence in this example, we expect user to click as following sequence:
+     [Initialize Devices], [Get Module No.], [Start Camera Engine],
+      ...[Set...] ( set Resolution, Gain, ET...etc.) [Install Frame Hooker], [Start Grab]
+      <...The callback will be called by camera engine with the frame data >             While Shuting down the 
+application, user should do the following click in sequence:
+      [UnInstall Frame Hooker], [Stop Grab], [Stop Camera Engine], [Uninitializa Devices]

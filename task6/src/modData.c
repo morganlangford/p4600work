@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <"functionGen.h">
 
-/* This function is to find the max amplitude of the sine wave */
+/* This function is to find the max amplitude of the sine wave at a certain frequency*/
 
 float amplitude(int len, float* arr){
 	// Basically I have to find the max and min values and then find the difference
@@ -33,6 +34,9 @@ float amplitude(int len, float* arr){
 	reduce the noise and return a smooth set of data
 	- done by averaging data */
 
+
+
+
 void smoothCurve(int len, float* input, float* output){	
 	float avg;			
 
@@ -47,4 +51,22 @@ void smoothCurve(int len, float* input, float* output){
 	}
 
 	// Note to self: you cannot return an array. Use pointers instead
+}
+
+
+/* This function takes the amplitude at a certain freq and puts it in the file */
+
+void cycleFreq(ViSession* handle,int lower_freq, int upper_freq, int num_points, char* file_name, float* smoothedArray){
+	FILE* freq_vs_amp;
+	freq_vs_amp = fopen(file_name,"w");	//fopen("file_name.DAT","w");
+	float amp = 0;
+
+	for(int i = lower_freq; i < upper_freq; i += (float)((upper_freq - lower_freq) / num_points)){
+	// Basically it cycles from lower freq to upper freq using n steps where n = num_points			
+		changeFreq(*handle, i, 5);
+		amp = amplitude(num_points,smoothedArray);
+		fprintf(freq_vs_amp,"\n%f %f",amp,i);
+								
+	}
+	fclose(freq_vs_amp);
 }

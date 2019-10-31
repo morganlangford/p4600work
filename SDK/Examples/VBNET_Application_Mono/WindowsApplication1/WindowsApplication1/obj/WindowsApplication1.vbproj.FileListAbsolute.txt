@@ -1,0 +1,70 @@
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Documents and Settings\JTZheng\Desktop\MightexTest\VB_Test\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\spectrometer\USB2_0_HighSpeed\CY7C6801x\Firmware\PC_Software\MightexSDK\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\bufferred\CCD_Camera\SecondProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\bufferred\ThirdProject\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB_Camera\NewClassic\PCSoftware\Examples\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.frmMain.resources
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\SSExample\VBNET_Application_Mono\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml

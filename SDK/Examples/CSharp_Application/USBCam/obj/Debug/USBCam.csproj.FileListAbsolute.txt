@@ -1,0 +1,8 @@
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\ResolveAssemblyReference.cache
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\USBCam.Properties.Resources.resources
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\USBCam.FUSBCam.resources
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\USBCam.csproj.GenerateResource.Cache
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\USBCam.exe
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\bin\Debug\USBCam.exe
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\bin\Debug\USBCam.pdb
+C:\develop\Projector\USB3.0\SuperSpeed_NewClassic\PCSoftware\Delivery\SDK\Examples\CSharp_Application\USBCam\obj\Debug\USBCam.pdb

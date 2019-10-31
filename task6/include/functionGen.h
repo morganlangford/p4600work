@@ -3,4 +3,6 @@
 
 #include <stdio.h>
 
+void changeFreq(ViSession * handle, int freq, float peak_to_peak_volts);
+
 #endif

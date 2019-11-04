@@ -1,0 +1,14 @@
+Programming of microcontrollers - similar to PIC, arduino
+
+Normally we have von neumann architechture for a computer 
+	ALU, CU, REGISTERS & a lot of MEMORY
+The memory is usually DRAM - dynamic random access memory, just uses capacitors
+	'Dynamic' because the capacitor slowly, continuously discharges from 1 to 0 so it needs to be topped up
+	When computer turns off, everything discharges
+
+Microcontrollers use a different architechture - Harvard
+Mem is divided into two sections - program & data memory - completely separate
+	Prog mem is flash memory - non-volatile, like a flash drive
+	Data mem is SRAM, faster but takes up more mem
+
+The chip we'll use is the ATMEGA 328P	

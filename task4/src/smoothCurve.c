@@ -9,11 +9,11 @@
 void smoothCurve(int len, float* input, float* output){	
 	float avg;			
 
-	for(int i = 0; i < len; i++){ 			// this loop cycles through all the data							
-		avg = 0;	
+	for(int i = 0; i < len-4; i++){ 		// this loop cycles through all the data							
+		avg = 0;							// reset this every time
 
 		for(int j = 0; j < 5; j++){			// this loop uses a moving average to average the data
-			avg = (float)input[j]/5;				// is it supposed to be input[i+j]? Why?
+			avg = (float)input[j+i]/5;		// is it supposed to be input[i+j]? Why?
 		}
 
 		output[i] = avg;					// fill new array

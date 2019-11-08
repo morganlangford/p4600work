@@ -10,46 +10,43 @@
 	and processing the data from the oscilloscope */
 
 void main(){
-	/* 	Basically this main was just for testing to see if the code works 
-		and does what it's supposed to do     */
-	FILE* noisy_wave_file; //this is my input file
-	noisy_wave_file = fopen("noisy_sin_wave.DAT","r");
-	//smooth the noisy wave
+	FILE* noisy_wave_file; 				//this is my input file
+	noisy_wave_file = fopen("noisy_sin_wave.DAT","r");		// open in read mode
 	float temp_x;
 	float temp_y;
-	int counter=0; //to find number of elements in the noisy wave
+	int counter = 0; 					
 
-	if(noisy_wave_file != NULL){ //this is reading all the lines in the file to determine the size
+	/* Do the following only if the file opens correctly */
+	if(noisy_wave_file != NULL){ 		//determines length of file
 		while(fscanf(noisy_wave_file,"%f %f",&temp_x,&temp_y)!= EOF){
 			counter++;
 		}
 
-	float noisy_wave[counter]; //make an array that holds all the y values
-	rewind(noisy_wave_file);
+		float noisy_wave[counter]; 			//array holds initial noisy values
+		float smoothed_wave[counter]; 		//array holds smoothed values
+
+		rewind(noisy_wave_file);			//restart from the beginning of the file
 
 		for(int i = 0; i < counter; i++){ // this is reading the lines and placing them into x and y values
-			fscanf(noisy_wave_file,"%f %f", &temp_x, &noisy_wave[i]); //do I need &?
+			fscanf(noisy_wave_file,"%f %f", &temp_x, &noisy_wave[i]); 
+		}
+		smoothCurve(counter, noisy_wave, smoothed_wave); //run the smoothing function
+
+
+		//output my smoothed wave to a file so I can plot it
+		FILE* smoothed_output_file;
+		smoothed_output_file = fopen("Smoothed_data.DAT","w");	// open in write mode
+
+		for(int j = 0; j < counter; j++){
+			fprintf(smoothed_output_file,"\n%f",smoothed_wave[j]);
 		}
 
-
-		
-	float smoothed_wave[counter]; //this holds the y values of the wave after filtering
-	smoothCurve(noisy_wave, smoothed_wave, counter); //run the smoothing function
-
-
-	//output my smoothed wave to a file so I can plot it
-	FILE* smoothed_output_file;
-	smoothed_output_file = fopen("Smoothed_data.DAT","w");
-	for(int j = 0; j < counter; j++){
-		fprintf(smoothed_output_file,"\n%f",smoothed_wave[j]);
-	}
-
-	fclose(noisy_wave_file);
-	fclose(smoothed_output_file);
-	//now to use the amplitude function
-	float amp = 0;
-	amp = amplitude(smoothed_wave, counter);
-	printf("\nAmplitude is: %f",amp);
+		fclose(noisy_wave_file);
+		fclose(smoothed_output_file);
+		//now to use the amplitude function
+		float amp = 0;
+		amp = amplitude(counter, smoothed_wave);
+		printf("\nAmplitude is: %f",amp);
 	}
 	else printf("\nCould not find file");
 }

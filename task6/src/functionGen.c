@@ -15,3 +15,19 @@ void changeFreq(ViSession * handle, int freq, float peak_to_peak_volts){
 	viWrite(*handle, request, strlen(request),&resultCount);
 
 }
+
+void getScale(char* ret)
+{
+	viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount); //request the scale for the scope
+	viRead(scopeHandle,ret,20,&resultCount);		//places it in a string called ret
+}
+
+
+/* Haven't actually used this yet */
+void getCurve(ViSession handle, char* curveArray)
+{
+	viWrite(handle,"DAT:SOU CH1\n",12,&resultCount);
+	viWrite(handle,"CURV?\n",6,&resultCount);
+	_sleep(2);
+	viRead(handle,curveArray,2500,&resultCount); //returns a signed integer
+}

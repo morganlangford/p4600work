@@ -99,8 +99,9 @@ void main(int argc, char** argv)
 							/* Get scale of scope */
 							char ret[20];			// return
 							ret[19] = '\0';
-							viWrite(scopeHandle,"CH1:SCA?\n",9,&resultCount);
-							viRead(scopeHandle,ret,20,&resultCount);
+							
+							getScale(ret);
+
 							printf("Scale is %s\n",ret);
 
 							float volts;

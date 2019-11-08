@@ -1,3 +1,12 @@
+/*
+ * task8.c
+ *
+ * Created: 2019-11-07 6:11:04 PM
+ * Author : Morgan Langford
+ */ 
+
+#define F_CPU 1000000UL
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
@@ -23,6 +32,6 @@ int main()
 {
 	setup();					// gets run once at the beginning
 	while(keep_going) loop();	// basically while (1)
- 
+	
 	return 0;
 }

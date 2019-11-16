@@ -7,11 +7,10 @@
 
 #include <avr/io.h>
 
-
 int main(void)
 {
     
-	TCNT0 = 0;						// sets timer to zero
+	TCNT0 = 0;							// sets timer to zero
 	TCCR0B = (1 << CS00) | (1 << CS02);	// sets timer rate = clk/1024
 	
     while (1) 

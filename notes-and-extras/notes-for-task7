@@ -1,1 +1,29 @@
-/**/
+Programming of microcontrollers - similar to PIC, arduino
+
+Normally we have von neumann architechture for a computer 
+	ALU, CU, REGISTERS & a lot of MEMORY
+The memory is usually DRAM - dynamic random access memory, just uses capacitors
+	'Dynamic' because the capacitor slowly, continuously discharges from 1 to 0 so it needs to be topped up
+	When computer turns off, everything discharges
+
+Microcontrollers use a different architechture - Harvard
+Mem is divided into two sections - program & data memory - completely separate
+	Prog mem is flash memory - non-volatile, like a flash drive
+	Data mem is SRAM, faster but takes up more mem
+
+The chip we'll use is the ATMEGA 328P	
+
+The chip itself contains GPIO - general purpose input/output, set to high/low
+Can, therefore, set pins as input or output
+If input, you could set it to read 5V, so if it reads that it's 1, if it's connected to ground it's 0
+
+It also has (I think) 4 ADC's - they'll actually measure the voltage and give you a value - they're only 10-bit (1024)
+
+There's a UART - like P1600 - Rx/Tx 
+
+SPI - can be used to communicate with several devices on one line
+
+I^2 C - has just two lines, but can communicate with up to 128 devices per line 
+
+Has a reset pin - it's usually at a high voltage; if you force it to low it'll reset 
+Also used to reprogram the device

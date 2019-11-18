@@ -47,10 +47,10 @@ void setup()
 	DDRD |= (1 << PD1);			// set as output pin
 	PORTD &= ~(1 << PD1);		// start pin as 0
 
-	TCCR0B = 0x01;				// set as hex 1 (normal counting mode)
-	TIMSK0 |= (1 << OCIE0B) | (1 << TOIE0);
+	TCCR0B = 0x01;				// start as normal mode with no clock prescaling
+	TIMSK0 |= (1 << OCIE0B) | (1 << TOIE0);		// enables timer overflow interrupt 
 	
-	OCR0A = 200;
+	OCR0A = 200;				// number to compare
 	
 
 	sei();						// start listening to interrupts

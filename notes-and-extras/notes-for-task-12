@@ -1,0 +1,30 @@
+/* 
+Serial communication - efficient in terms of resources
+Just need one wire and a clock
+Way better than doing everything in parallel where 
+you need a ton of wires
+
+UART - stands for universal something
+Has another name RS-232
+Connects from TX to RX 
+Has a few draw backs - only two devices connected together usually
+More is difficult and confusing 
+Other problem is the data is square wave pulses
+The machines have to know what rate the data will be 
+coming in at because there's no syncronization between them
+Band rate must be agreed ahead of time by user
+They also must have an interrupt so it'll stop what it's doing 
+and listen to the data suddenly coming in 
+
+Want syncronous periferal interface
+Divide everything into masters and slaves 
+Master: MOSI, MISO, SCK
+MOSI stands for master out slave in 
+MISO stands for master in slave out 
+Now we can connect to multiple devices 
+All MOSI's are connected together, all MISO's connected together 
+Master sends out continuous square wave, all connected
+work at that speed - connected via clock
+Also a CS1, CS2, ... "chip select" - chooses which device to talk to 
+
+*/

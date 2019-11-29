@@ -8,32 +8,29 @@ to reuse these functions in a program where printf doesn't apply - e.g. an embed
 device without a screen */
 
 float findMean(float* input, int len){	// this function finds the mean
-	if (data == NULL) return 0;
-	if (n == 0) return 0;
-	if (n == 1) return *input;
+	if (input == NULL) return 0;
+	if (len == 0) return 0;
+	if (len == 1) return *input;
 
 	float mean = 0;
 
 	for (int i=0; i<len; i++){
-		mean += input[i];			// this is actually finding the sum
+		mean += input[i];				// this is actually finding the sum
 	}
 
-	return mean/len;
+	return (float)mean/len;
 }
 
 float findStdDev(float* input, float mean, int len){	// this function finds the std dev
 	float sum;
 
 	for (int j=0; j<len; j++){
-		sum += powf((input[j] - mean),2);		// sum of the squared differences
+		sum += powf((input[j] - mean),2);	// sum of the squared differences
 	}
+			
 
-	float stdDev = sqrt(sum/(len-1));			// equation for std dev using the mean from previous function
-
-	return stdDev;
+	return sqrt(sum/(len-1)); 				// equation for std dev using the mean from previous function
 }
-
-
 
 int main(){
 	FILE* dataFile;	// pointer towards our data file holding x and y for sine
@@ -49,8 +46,6 @@ int main(){
 			counter++;
 		}
 		
-		/*JAMES: Should catch here if counter == 0  */
-
 		float y[counter]; 					// creating an array of length of file
 
 		rewind(dataFile); 					// start at the beginning of the file again
@@ -66,7 +61,7 @@ int main(){
 		printf("\nStandard deviation = %f",stdDev);
 
 	}
-	else printf("\nCouldn't read file.");	// uf the file couldn't be opened...
+	else printf("\nCouldn't read file.");	// if the file couldn't be opened...
 
 	fclose(dataFile);						// close file
 }

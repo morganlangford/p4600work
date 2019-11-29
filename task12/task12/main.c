@@ -12,9 +12,8 @@
 
 uint8_t keep_going = 1;
 
-void loop()
+void loop(uint8_t data)
 {
-	uint8_t data = 5;
 	uint8_t datareceived;
 	
 	PORTB &= ~(1 << PB6); // Pulls chip select low
@@ -33,14 +32,24 @@ void setup()
 	SPCR |= (1 << SPE);
 	SPCR |= (1 << MSTR);
 	SPCR |= (1 << CPOL);
-	DDRB |= (1<<PB3) | (1<<PB5);
+	
+	DDRB |= (1<<PB3) | (1<<PB5) | (1<<PB2) | (1<<PB6); // MOSI, SCK, SS 'slave select', chip select
 }
 
 int main()
 {
 	setup();					
-	while(keep_going) loop();	
-	
+	while(keep_going)
+	{
+		uint8_t i = 0;
+		while (i < 127)
+		{
+			loop(i);
+			_delay_ms(600);
+			i++;
+		}
+	} 
+		
 	return 0;
 }
 

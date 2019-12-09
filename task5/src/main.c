@@ -25,19 +25,18 @@ void main(int argc, char** argv)
 	int lsb;
 	int msb;
 
-	status = viOpenDefaultRM(&defaultRM);
-
+	status = viOpenDefaultRM(&defaultRM);	
 	if(status == VI_SUCCESS)
 	{
-		status = viFindRsrc(defaultRM,"USB[0-9]::?*INSTR",	&resourceList,&num_inst,description);
+		status = viFindRsrc(defaultRM,"USB[0-9]::?*INSTR",&resourceList,&num_inst,description);
 		if(status == VI_SUCCESS)
 		{
 			status = viOpen(defaultRM,description,	VI_NULL,VI_NULL,&scopeHandle);
-
 			if(status == VI_SUCCESS)
 			{
 				printf("\nOpened %s\n",description);
 
+				// Ask for the IDN number
 				viWrite(scopeHandle,"*IDN?\n",6,&resultCount);
 				viRead(scopeHandle,resultBuffer,256,&resultCount);
 

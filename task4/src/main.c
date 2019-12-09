@@ -41,11 +41,12 @@ void main(){
 			fprintf(smoothed_output_file,"\n%f",smoothed_wave[j]);
 		}
 
+		// always close files at the end
 		fclose(noisy_wave_file);
 		fclose(smoothed_output_file);
+
 		//now to use the amplitude function
-		float amp = 0;
-		amp = amplitude(counter, smoothed_wave);
+		float amp = amplitude(counter, smoothed_wave);
 		printf("\nAmplitude is: %f",amp);
 	}
 	else printf("\nCould not find file");
